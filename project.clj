@@ -59,6 +59,15 @@
               :source-map true
               :optimizations :none
               :pretty-print  true}}
+            :js-dom-test
+            {:source-paths ["src/cljs" "src/cljc" "test/cljs" "env/dev/cljs"]
+             :notify-command ["node" "node-unit-tests.js"]
+             :compiler
+             {:main "scrumble.components-test-runner"
+              :output-to "test.js" #_"target/cljsbuild/dom-test/test.js"
+              :output-dir "target/cljsbuild/dom-test/js"
+              :optimizations :simple
+              :pretty-print  false}}
 
 
 
